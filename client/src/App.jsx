@@ -1,5 +1,5 @@
 import React from 'react';
-import { BrowserRouter, Routes, Route, Navigate } from 'react-router-dom';
+import { HashRouter, Routes, Route, Navigate } from 'react-router-dom';
 import { AuthProvider } from './context/AuthContext';
 import { Navbar } from './components/Navbar';
 import { LandingPage } from './pages/LandingPage';
@@ -15,7 +15,7 @@ import './styles/layout.css';
 function App() {
   return (
     <AuthProvider>
-      <BrowserRouter>
+      <HashRouter>
         <div className="resumely-app-root">
           <Navbar />
           <main className="resumely-main-content">
@@ -29,7 +29,7 @@ function App() {
             </Routes>
           </main>
         </div>
-      </BrowserRouter>
+      </HashRouter>
     </AuthProvider>
   );
 }
